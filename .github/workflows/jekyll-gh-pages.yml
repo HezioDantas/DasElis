@@ -1,51 +1,69 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Loja de Blusas Femininas Das Elis</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-jobs:
-  # Build job
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./
-          destination: ./_site
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-
-  # Deployment job
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    <header>
+    <style>
+  body {
+    font-family: lugrasismo, sans-serif;
+    background-color: pink;
+    color: white;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: red;
+    padding: 1em;
+    text-align: center;
+  }
+  h1 {
+    margin: 0;
+  }
+  .content {
+    padding: 2em;
+  }
+  footer {
+    background-color: red;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+</style>
+        <h1>Bem-vinda à Nossa Loja de Blusas Femininas Das Elis</h1>        
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Página Inicial</a></li>
+            <li><a href="#">Catálogo</a></li>
+            <li><a href="https://www.instagram.com/das.elis?utm_source=qr&igsh=cWwzZmNjc2JwbWh3" target="_blank">Contato:@das.elis  <img src="imagens/IMG_3.png" width="25px" height="25px"></a></li>
+        </ul>
+    </nav>
+    
+    <main>
+    		
+        <section class="destaques">
+            <h2>Blusas em Destaque</h2>
+            <!-- Aqui você pode listar produtos em destaque -->
+        </section>
+        
+        <section class="novidades">
+            <h2>Novidades</h2>
+            <img src="imagens/IMG_1.jpg" width="640px" height="1000px"><img src="imagens/IMG_2.jpg" width="640px" height="1000px">
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Sua Loja de Blusas Femininas</p>
+    </footer>
+</body>
+</html>
